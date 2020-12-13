@@ -40,6 +40,37 @@ public class ExampleStringCommand : ICommand<string>
 }
 ```
 
+### Example of IResultCommand implementation
+
+```csharp
+public class ExampleResultCommand : IResultCommand<Result>
+{
+    public bool IsExecuted { get; private set; }
+
+    public Result Execute()
+    {
+        IsExecuted = true;
+	
+	return Result.Ok();
+    }
+}
+```
+### Example of IResultCommand implementation with input paramater
+The IResultCommand supports only one input parameter. If a command needs multiple input parameters, bundle them in a Parameter object.
+```csharp
+public class ExampleStringCommand : ICommand<string, Result>
+{
+    public string Message { get; private set; }
+
+    public Result Execute(string input)
+    {
+        Message = input;
+	
+	return Result.Ok();
+    }
+}
+```
+
 ### Example use of CompositeCommand
 CompositeCommand accepts a list of ICommand parameters in the constructor, either as an IList, or as a parameter array. The latter approach is shown in this example.
 ```csharp
