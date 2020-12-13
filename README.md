@@ -4,6 +4,8 @@ This Commands library provides generic ICommand interfaces.
 
 It also includes an implementation of a CompositeCommand which executes a list of ICommands in order. 
 
+The IResultCommand may be used in cases when the command has a status result which needs to be returned. For actual queries, please use an IQuery interface.
+
 ## Installation
 
 Available on [nuget](https://www.nuget.org/packages/ReneWiersma.Commands/)
@@ -25,7 +27,7 @@ public class ExampleCommand : ICommand
 ```
 
 ### Example of ICommand implementation with input paramater
-
+The ICommand supports only one input parameter. If a command needs multiple input parameters, bundle them in a Parameter object.
 ```csharp
 public class ExampleStringCommand : ICommand<string>
 {
