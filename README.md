@@ -39,6 +39,7 @@ public class ExampleStringCommand : ICommand<string>
 ```
 
 ### Example use of CompositeCommand
+CompositeCommand accepts a list of ICommand parameters in the constructor, either as an IList, or as a parameter array. The latter approach is shown in this example.
 ```csharp
 public void MultipleCommandsAreExecuted()
 {
