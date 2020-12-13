@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>ReneWiersma.Commands</AssemblyName>
+    <RootNamespace>ReneWiersma.Commands</RootNamespace>
+  </PropertyGroup>
+
+</Project>
