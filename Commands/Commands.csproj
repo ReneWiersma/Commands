@@ -4,6 +4,25 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>ReneWiersma.Commands</AssemblyName>
     <RootNamespace>ReneWiersma.Commands</RootNamespace>
+    <Authors>René Wiersma</Authors>
+    <Company>René Wiersma</Company>
+    <Description>Provides ICommand interfaces, and an implementation of a CompositeCommand.</Description>
+    <Copyright>Copyright 2020 - René Wiersma</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/ReneWiersma/Commands</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ReneWiersma/Commands</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>Command, commands, interface, ICommand, composite, CompositeCommand</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
