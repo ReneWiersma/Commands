@@ -4,17 +4,13 @@ namespace ReneWiersma.Commands
 {
     public sealed class CompositeCommand : ICommand
     {
-        readonly CommandList<ICommand> commands;
+        readonly IEnumerable<ICommand> commands;
 
-        public CompositeCommand(params ICommand[] commands)
-        {
-            this.commands = new CommandList<ICommand>(commands);
-        }
+        public CompositeCommand(params ICommand[] commands) =>
+            this.commands = commands.ToCheckedEnumerable();
 
-        public CompositeCommand(IEnumerable<ICommand> commands)
-        {
-            this.commands = new CommandList<ICommand>(commands);
-        }
+        public CompositeCommand(IEnumerable<ICommand> commands) =>
+            this.commands = commands.ToCheckedEnumerable();
 
         public void Execute()
         {
@@ -25,17 +21,13 @@ namespace ReneWiersma.Commands
 
     public sealed class CompositeCommand<T> : ICommand<T>
     {
-        readonly CommandList<ICommand<T>> commands;
+        readonly IEnumerable<ICommand<T>> commands;
 
-        public CompositeCommand(params ICommand<T>[] commands)
-        {
-            this.commands = new CommandList<ICommand<T>>(commands);
-        }
+        public CompositeCommand(params ICommand<T>[] commands) =>
+            this.commands = commands.ToCheckedEnumerable();
 
-        public CompositeCommand(IEnumerable<ICommand<T>> commands)
-        {
-            this.commands = new CommandList<ICommand<T>>(commands);
-        }
+        public CompositeCommand(IEnumerable<ICommand<T>> commands) =>
+            this.commands = commands.ToCheckedEnumerable();
 
         public void Execute(T input)
         {

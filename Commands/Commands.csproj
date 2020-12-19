@@ -12,10 +12,10 @@
     <PackageProjectUrl>https://github.com/ReneWiersma/Commands</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ReneWiersma/Commands</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
-    <PackageTags>Command, commands, interface, ICommand, composite, CompositeCommand</PackageTags>
+    <PackageTags>Command, commands, interface, ICommand, composite, CompositeCommand, async</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.1</Version>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <Version>1.1.0</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +23,10 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ReneWiersma.Preconditions" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
